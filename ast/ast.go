@@ -34,7 +34,7 @@ func (p *Program) TokenLiteral() string {
 	}
 }
 
-func (ls *LetStatement) statomentNode()       {}
+func (ls *LetStatement) statementNode()       {}
 func (ls *LetStatement) TokenLiteral() string { return ls.Token.Literal }
 
 type Identifier struct {
