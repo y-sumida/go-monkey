@@ -199,14 +199,14 @@ func (p *Parser) noPrefixParseFnError(t token.TokenType) {
 }
 
 func (p *Parser) parsePrefixExpression() ast.Expression {
-  expression := &ast.PrefixExpression{
-    Token: p.curToken,
-    Operator: p.curToken.Literal,
-  }
+	expression := &ast.PrefixExpression{
+		Token:    p.curToken,
+		Operator: p.curToken.Literal,
+	}
 
-  p.nextToken()
+	p.nextToken()
 
-  expression.Right = p.parseExpression(PREFIX)
+	expression.Right = p.parseExpression(PREFIX)
 
-  return expression
+	return expression
 }
