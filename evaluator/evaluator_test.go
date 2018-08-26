@@ -220,7 +220,7 @@ if (10 > 1) {
   return 1;
 }
 `,
-			"unknown operator: BOOLEAN + BOOLEANA",
+			"unknown operator: BOOLEAN + BOOLEAN",
 		},
 	}
 
