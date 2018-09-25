@@ -345,9 +345,12 @@ func TestBuiltinFunctions(t *testing.T) {
 		{`len(1)`, "argument to `len` not supported, got INTEGER"},
 		{`len("one", "two")`, "wrong number of arguments. got=2, want=1"},
 		{`len([1, 2, 3])`, 3},
+		{`len([])`, 0},
 		{`first([1, 2, 3])`, 1},
+		{`first([])`, nil},
 		{`first("string")`, "argument to `first` must be ARRAY, got STRING"},
 		{`last([1, 2, 3])`, 3},
+		{`last([])`, nil},
 		{`last("string")`, "argument to `last` must be ARRAY, got STRING"},
 		{`rest([1, 2, 3])`, []int{2, 3}},
 	}
