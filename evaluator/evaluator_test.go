@@ -353,6 +353,8 @@ func TestBuiltinFunctions(t *testing.T) {
 		{`last([])`, nil},
 		{`last("string")`, "argument to `last` must be ARRAY, got STRING"},
 		{`rest([1, 2, 3])`, []int{2, 3}},
+		{`push([], 1)`, []int{1}},
+		{`push("string", 2)`, "argument to `push` must be ARRAY, got STRING"},
 	}
 
 	for _, tt := range tests {
